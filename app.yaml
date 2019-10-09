@@ -10,5 +10,8 @@ handlers:
 
 libraries:
 - name: ssl
-version: latest  
+  version: latest  
 
+skip_files:
+- ^(.*/)?.*libcaffe2\.so
+- ^(.*/)?.*pack-74a9dd5f8f30c035a0be9a67aaea0e94704f5163\.pack
