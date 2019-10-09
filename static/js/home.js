@@ -1,14 +1,11 @@
 $(function() {
   $(".typed").typed({
     strings: [
-      "stat rish.human<br/>" + 
-      "><span class='caret'>$</span> work: hardware-software interaction, camera, computer vision, android<br/> ^100" +
-      "><span class='caret'>$</span> hobbies: football, solo travel, blogging<br/> ^300" +
-      "><span class='caret'>$</span> alias: crearo <br/>" +
-      "><span class='caret'>$</span> highlight:  <a href='/projects/video-stab'>real time image stabilization on Android</a>, <a href='/projects/lifehacks'>app with >750K installs</a><br/>" +
-      "><span class='caret'>$</span> job: military thermal cameras at <a href='http://www.tonboimaging.com/'>Tonbo Imaging</a><br/> ^100" /*+
-      "><span class='caret'>$</span> <a href='/timeline'>timeline</a> <a href='http://www.github.com/crearo/'>github</a> <a href='http://in.linkedin.com/in/bhardwajrish/'>linkedin</a> <a href='http://bhardwajrish.blogspot.com/'>blog</a><br/>"*/
-    ],
+      "Qing Zhou<br/>" + 
+      "><span class='caret'>$</span> work: Data warehouse, Statistic Analysis, Cloud Data Engineering, NLP <br/> ^100" +
+      "><span class='caret'>$</span> hobbies: ski, bike, trade options<br/> ^300" +
+      "><span class='caret'>$</span> highlight:  <a href='https://github.com/datascienceqing/SparkETL_dbfs/blob/master/songDatabase.ipynb'>ETL in Azure Databricks</a>, <a href='https://youtu.be/5R_c7XdWmZg'>race car simulation</a><br/>" +
+      "><span class='caret'>$</span> job:Data Integration Specialist at Kaiser Permanente Center for Health Research <br/> ^100"     ],
     showCursor: true,
     cursorChar: '_',
     autoInsertCss: true,

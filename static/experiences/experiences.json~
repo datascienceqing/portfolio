@@ -1,0 +1,56 @@
+{
+  "experiences": [
+    {
+      "name": "selfdriving-car Nanodegree",
+      "link": "selfdriving-car-nanodegree",
+      "location": "Remote",
+      "weight": 3,
+      "tags": [
+        "udacity",
+        "selfdriving car"
+      ],
+      "date": "Jan - Nov 2016",
+      "short": "Udacity's Nanodegree in selfdriving-car.",
+      "photos": [
+        "/static/experiences/selfdriving-car-nanodegree/selfdriving-car-nanodegree.jpg"
+      ]
+    },
+    
+    {
+      "name": "Hack Oregon",
+      "link": "hack-oregon",
+      "location": "Porltand, OR, US",
+      "weight": 2,
+      "tags": [
+        "Random Forest",
+        "Data explore"
+      ],
+      "date": "Oct 2016 - May 2017",
+      "short": "Worked in Hack Oregon for a Data Analysis project",
+       "photos": [
+         "/static/experiences/hack-oregon/hack-oregon.jpg"
+      ]
+    },
+    {
+      "name": "Kaiser Permanente Center for Health research",
+      "link": "kaiser",
+      "weight": 1,
+      "location": "Portland, OR, US",
+      "tags": [
+        "ETL",
+	"NLP",
+	"statistic analysis"
+      ],
+      "date": "Jul 2017 - Present",
+      "short": "Responsible for integrating and harmonizing databases from multiple data sources, developing SQL data quality checking programs, and performing advanced statistical analysis requiring data profiling, cleaning, modeling and visualizing. ",
+      "presentations": [
+        "https://drive.google.com/file/d/0B8m161HNMd3qV3l1WUc1YldXeEhNb0ZjcDhMTHNVamJhX2dr/view?usp=sharing",
+        "https://drive.google.com/file/d/0B8m161HNMd3qMkJDMU5KWkZFazhULVpuVjhRYTBMcmIzanE0/view?usp=sharing",
+        "https://drive.google.com/file/d/0B8m161HNMd3qLVlzRDJoOTUybkRTZ1lITkNPa0U1ZEF6WXlz/view?usp=sharing"
+       ],
+       "photos": [
+        "/static/experiences/kaiser/KPCHR-logo.jpg"
+      ]
+    }
+  ]
+}

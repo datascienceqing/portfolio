@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "name": "Training Self-driving car",
+      "link": "selfdriving-car",
+      "date": "Nov 2016",
+      "short": "Collected image data by driving a race car in a simulation game. Then used the data to train a Convolutional Neural Network model. The model can drive by itsel in the game. ",
+      "status": "complete",
+      "weight": 1,
+      "tags": [
+        "CNN",
+        "image analysis"
+      ],
+      "videos": [
+        "<iframe width=\"1351\" height\="533\" src=\"https://www.youtube.com/embed/5R_c7XdWmZg\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+      ],
+      "photos": [
+        "/static/projects/selfdriving-car/race-car.jpg"
+      ]
+    }
+     ]
+}

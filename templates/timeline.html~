@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/timeline.css') }}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col s12 m4 l8">
+            <div class="col s12 m4 l8">
+                <span class="date">2019</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/timeline" class="title">[Used car price analysis]</a>
+                        </div>
+                        <span class="content">Built a web crawler to collect used information from craigslist in Greater Portland Oregon area. Loaded data into Azure DataBricks. Explored the data and compared the correlation between price and odometer vs correlation between price and model year.
+		       	</span>
+                    </li>
+		    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/timeline" class="title">[Hive database]</a>
+                        </div>
+                        <span class="content">Loaded song and song-log data into Azure blob storage. Mounted the blob storage onto Azure DataBricks. Read the data into Hive tables using Spark. Built a Hive database after cleaning and partitioning
+			</span>
+                    </li>
+		    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/timeline" class="title">[ETL report]</a>
+                        </div>
+                        <span class="content">[WIP] Automated daily ETL runtime and table-size reports using SSIS and SSRS packages.
+                        </span>
+                    </li>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">location_searching</i>
+                            <a href="/timeline" class="title">[Error Event Schema]</a>
+                        </div>
+                        <span class="content">Built Error Event Schema in SSIS for ETL process, which improved the efficiency of
+				troubleshooting and made the ETL more resilient.
+                         </span>
+                    </li>
+               </ul>
+                  
+                <span class="date">2018</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">location_searching</i>
+                            <a href="/timeline" class="title">[Teradata to Oracle]</a>
+                        </div>
+                        <span class="content">Converted and verified more than 300 queries that extracted and conformed data from Kaiser
+			Permanente (KP) EMR and Claim database when KP changed the host from Teradata to Oracle
+			</span>
+                    </li>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/projects/lib-graf" class="title">[Anomaly Detection]</a>
+                        </div>
+                        <span class="content">Detected Anomalies in staging area and prevents bad data from leaking into production. This
+				system has avoided loading more than 80 source errors in the period of 1 year.
+			</span>
+                    </li>
+                                   </ul>
+                <span class="date">2017</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">work</i>
+                            <a href="http://bhardwajrish.blogspot.com" class="title">[Portland Fire & Rescue]</a>
+                        </div>
+                        <span class="content">Explored the data, calculated response time, performed False Alarm Analysis and visualized the
+			analytical results in Python Notebook.</span>
+                    </li>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/projects/selfdriving-car" class="title">[Cloning human driving behavior]</a>
+                        </div>
+                        <span class="content">Built an Nvidia end-to-end Convolutional Neural Network using Python Keras library to drive car
+			in a simulator.
+			 Collected 10-minute data on the simulator then used the data to train the model. The model can
+			drive the simulator car autonomously.</span>
+                    </li>
+                     </ul>
+                <span class="date">2013-2016</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">linked_camera</i>
+                            <a href="/projects/thermal-face-detection" class="title">[Database for Genetic DNA testing]</a>
+                        </div>
+                        <span class="content">Established a
+			pharmacogenomics knowledge database in SQL Server for reporting purpose.
+			</span>
+                    </li>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">work</i>
+                            <a href="http://bhardwajrish.blogspot.com/2017/12/one-year-at-tonbo-imaging.html"
+                               class="title">[Clinic trial data management]</a>
+                        </div>
+                        <span class="content">Managed 6 clinic trial data collection, storage and analysis as assay development technical lead.</span>
+                    </li>
+                                    </ul>
+                <span class="date">2008-2013</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">android</i>
+                            <a href="/projects/lifehacks" class="title">[Lifehacks, Android]</a>
+                        </div>
+                        <span class="content">identify more than 50 mutations that cause Neonatal
+			Diabetes, published 10 peer-reviewed scientific papers.</span>
+                    </li>
+                    </ul>
+                <span class="date">2004-2008</span>
+                <ul>
+                    <li>
+                        <div class="icon-title">
+                            <i class="tiny material-icons">android</i>
+                            <a href="/projects/dawebmail" class="title">[Wuhan University]</a>
+                        </div>
+                        <span class="content">PhD in Microbiology</span>
+                    </li>
+                       </ul>
+                </div>
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <!--<li><a href="/projects/" class="title">[]</a>
+        <span class="content"></span></li>-->
+    {% endblock %}

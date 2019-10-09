@@ -14,18 +14,18 @@ try:
 except:
     print('Tracking ID not set')
 
-resume_pdf_link = 'https://drive.google.com/open?id=0B2BrrDjIiyvmcWp5T194cy00UmM'
+resume_link = 'https://drive.google.com/file/d/1F7ctz2y3f_GrmyFQxd9UNFaaL9VoTif7/view?usp=sharing'
 
 
 @app.route('/')
 def index():
-    age = int((datetime.date.today() - datetime.date(1995, 4, 22)).days / 365)
+    age = int((datetime.date.today() - datetime.date(1975, 12, 3)).days / 365)
     return render_template('home.html', age=age)
 
 
 @app.route('/timeline')
 def timeline():
-    return render_template('timeline.html', resume_pdf_link=resume_pdf_link)
+    return render_template('timeline.html', resume_link=resume_link)
 
 
 @app.route('/projects')
@@ -38,36 +38,6 @@ def projects():
         data = [project for project in data if tag.lower() in [project_tag.lower() for project_tag in project['tags']]]
 
     return render_template('projects.html', projects=data, tag=tag)
-
-
-@app.route('/lifehacks/privacy-policy')
-def lifehacks_privacy_policy():
-    return render_template('lifehacks-privacy-policy.html')
-
-
-@app.route('/dawebmail/privacy-policy')
-def dawebmail_privacy_policy():
-    return render_template('dawebmail-privacy-policy.html')
-
-
-@app.route('/lifehacks/terms-and-conditions')
-def lifehacks_disclaimer():
-    return render_template('lifehacks-terms-and-conditions.html')
-
-
-@app.route('/lifehacks/disclaimer')
-def lifehacks_terms_and_conditions():
-    return render_template('lifehacks-disclaimer.html')
-
-
-@app.route('/mit-media-lab-application')
-def media_lab_application():
-    return render_template('mit-media-lab-application.html')
-
-
-@app.route('/blog')
-def blog():
-    return redirect("http://bhardwajrish.blogspot.com/", code=302)
 
 
 @app.route('/experiences')
@@ -122,46 +92,6 @@ def get_static_file(path):
 
 def get_static_json(path):
     return json.load(open(get_static_file(path)))
-
-
-"""
-Specific URLs
-"""
-
-
-@app.route('/fifa-or-real')
-def fifa_or_real():
-    return render_template('upload.html')
-
-
-@app.route('/upload', methods=['POST'])
-def upload_file():
-    if request.method == 'POST':
-        f = request.files['file']
-        os.makedirs('./static/uploads/', exist_ok=True)
-        file_name = 'upload-%s' % time.strftime("%Y-%m-%d-%H-%M-%S")
-        f.save('./static/uploads/%s' % file_name)
-        return redirect(url_for('predict_fifa', name=file_name))
-
-
-@app.route('/predict-fifa')
-def predict_fifa():
-    import fastai.vision as fastai
-    global fifa_learn
-
-    name = request.args.get('name')
-    path = './static/uploads/%s' % name
-    print('------------------')
-    print(path)
-    if not os.path.exists(path):
-        return "File doesn't exist, soz, go to the home page! %s" % path
-
-    img = fastai.open_image(path)
-    if fifa_learn is None:
-        fifa_learn = fastai.load_learner('.', 'fifa.learn')
-    pred_class, pred_idx, outputs = fifa_learn.predict(img)
-    return render_template('fifa-or-real-predict.html', img=path, predict_class=pred_class, predict_confidence=outputs,
-                           name=name)
 
 
 if __name__ == "__main__":
