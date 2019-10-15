@@ -3,8 +3,6 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /static
-  static_dir: static
 - url: /.*
   script: main.app
 
@@ -12,6 +10,3 @@ libraries:
 - name: ssl
   version: latest  
 
-skip_files:
-- ^(.*/)?.*libcaffe2\.so
-- ^(.*/)?.*pack-74a9dd5f8f30c035a0be9a67aaea0e94704f5163\.pack
