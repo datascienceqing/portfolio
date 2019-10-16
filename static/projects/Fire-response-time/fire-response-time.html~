@@ -1,0 +1,6 @@
+<div>
+    <span>Built an Nvidia end-to-end Convolutional Neural Network using Python Keras library to drive car
+   in a simulator. </span>
+    <span>Collected 10-minute data on the simulator then used the data to train the model. The model can
+    drive the simulator car autonomously.</span>
+ </div>

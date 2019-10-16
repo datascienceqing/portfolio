@@ -17,6 +17,21 @@
       "photos": [
         "/static/projects/selfdriving-car/race-car.jpg"
       ]
+    },
+     {
+      "name": "Fire-response-time",
+      "link": "Fire-response-time",
+      "date": "Jan 2017",
+      "short": "Portland Fire & Rescue supplied fire dispatch data for year 2010-2016. I did some exporatory analysis and built an interactive app on Heroku. ",     "status": "complete",
+      "weight": 2,
+      "tags": [
+        "DEA",
+        "Visualization"
+      ],
+        "photos": [
+        "/static/projects/Fire-response-time/fire.jpeg"
+      ],
+      "Heroku":"http://fire-response.herokuapp.com/index"
     }
-     ]
+ ]
 }  
